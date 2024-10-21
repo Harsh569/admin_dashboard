@@ -46,6 +46,7 @@ const Sidebar1 = () => {
       sx={{
         "& .pro-sidebar-inner": {
           backgroundColor: `${colors.primary[900]} !important`, // ensure the background color applies
+          height: "108%",
         },
         "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
@@ -119,7 +120,7 @@ const Sidebar1 = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"
-              to="/"
+              to="/dashboard"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
