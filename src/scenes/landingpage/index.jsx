@@ -84,47 +84,9 @@ const LandingPage = () => {
       <Slider {...settings}>
         <Box sx={{ position: "relative" }}>
           <img
-            src="https://www.google.com/imgres?q=dashboard%20background%20images&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-vector%2Fgradient-style-abstract-wireframe-background_23-2148993321.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fdashboard-background&docid=W7Tf-EWUZHukoM&tbnid=z60Ex3RkuvIE_M&vet=12ahUKEwiwyYCdlaCJAxVch68BHc5mGvYQM3oECBYQAA..i&w=626&h=417&hcb=2&ved=2ahUKEwiwyYCdlaCJAxVch68BHc5mGvYQM3oECBYQAA"
-            alt="Image_0"
-            style={{ width: "100%", height: "480.23px" }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              top: "40%",
-              left: "5%",
-              color: "white",
-            }}
-          >
-            <Typography variant="h2" sx={{ mb: 2 }}>
-              PowerPortal
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4, fontSize: 20 }}>
-              Your Gateway to Comprehensive Energy Insights
-            </Typography>
-            <Button
-              variant="contained"
-              onClick={handleClick}
-              sx={{
-                backgroundColor: "#FAC300",
-                color: "#004E91",
-                fontSize: "0.9rem",
-                "&:hover": {
-                  backgroundColor: "#004E91",
-                  color: "#FFFFFF",
-                },
-              }}
-            >
-              Get started
-            </Button>
-          </Box>
-        </Box>
-
-        <Box sx={{ position: "relative" }}>
-          <img
             src="./assets/bg3.jpg"
             alt="Image_1"
-            style={{ width: "100%", height: "480.23px" }}
+            style={{ width: "100%", height: "580.23px" }}
           />
           <Box
             sx={{
@@ -135,10 +97,10 @@ const LandingPage = () => {
             }}
           >
             <Typography variant="h2" sx={{ mb: 2 }}>
-              PowerPortal
+              Admin Portal
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, fontSize: 20 }}>
-              Your Gateway to Comprehensive Energy Insights
+              Control Panel for Admin Efficiency and Analytics
             </Typography>
             <Button
               variant="contained"
@@ -161,7 +123,7 @@ const LandingPage = () => {
           <img
             src="./assets/bg2.jpg"
             alt="Image_2"
-            style={{ width: "100%", height: "480.23px" }}
+            style={{ width: "100%", height: "580.23px" }}
           />
           <Box
             sx={{
@@ -172,10 +134,10 @@ const LandingPage = () => {
             }}
           >
             <Typography variant="h2" sx={{ mb: 2 }}>
-              PowerPortal
+              Admin Portal
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, fontSize: 20 }}>
-              Your Gateway to Comprehensive Energy Insights
+              Control Panel for Admin Efficiency and Analytics
             </Typography>
             <Button
               variant="contained"
@@ -197,7 +159,7 @@ const LandingPage = () => {
           <img
             src="./assets/bg1.jpg"
             alt="Image_3"
-            style={{ width: "100%", height: "480.23px" }}
+            style={{ width: "100%", height: "580.23px" }}
           />
           <Box
             sx={{
@@ -208,10 +170,10 @@ const LandingPage = () => {
             }}
           >
             <Typography variant="h2" sx={{ mb: 2 }}>
-              PowerPortal
+              Admin Portal
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, fontSize: 20 }}>
-              Your Gateway to Comprehensive Energy Insights
+              Control Panel for Admin Efficiency and Analytics
             </Typography>
             <Button
               variant="contained"
@@ -236,22 +198,23 @@ const LandingPage = () => {
         <Typography
           variant="h4"
           align="center"
-          sx={{ mb: 3, color: mode === "light" ? "#000000" : "#ffffff" }}
+          sx={{ mb: 3, color: colors.primary[100] }}
         >
           Our Services
         </Typography>
         <Typography
           variant="body1"
           align="center"
-          sx={{ pb: 0, color: mode === "light" ? "#000000" : "#ffffff" }}
+          sx={{ pb: 0, color: colors.primary[100] }}
         >
-          PowerPortal is an integrated platform designed to provide a
-          comprehensive view of energy data, trends, and visualization. It
-          offers powerful tools to analyze real-time energy trading trends,
-          explore energy storage capacities, and visualize data through detailed
-          charts and tables. With PowerPortal, users can seamlessly access and
-          interpret complex energy information, making informed decisions and
-          optimizing energy strategies.
+          Our web application features an intuitive Admin Dashboard designed for
+          streamlined management and insights. The dashboard is divided into
+          three main sections: Data, which allows for efficient team and contact
+          management; Charts, offering visual analytics through bar, pie, line,
+          and geography charts; and Pages, including tools like calendars,
+          profile forms, and FAQs. This setup enables administrators to
+          seamlessly manage operations, view performance, and access key
+          resources in one central location.
         </Typography>
         <Box
           sx={{
@@ -297,7 +260,7 @@ const LandingPage = () => {
                     textAlign: "center",
                   }}
                 >
-                  TrendEx
+                  Data
                 </Typography>
               </Link>
               <Typography
@@ -310,7 +273,7 @@ const LandingPage = () => {
                   textAlign: "center",
                 }}
               >
-                Track, Analyze, and Act on Energy Trends
+                Efficiently Manage Teams, Contacts, and Financial Data
               </Typography>
             </Box>
           </Box>
@@ -354,7 +317,7 @@ const LandingPage = () => {
                     textAlign: "center",
                   }}
                 >
-                  Nexus
+                  Pages
                 </Typography>
               </Link>
               <Typography
@@ -367,7 +330,7 @@ const LandingPage = () => {
                   textAlign: "center",
                 }}
               >
-                Connecting the Dots in Energy Infrastructure
+                Essential Tools for Daily Operations and User Management
               </Typography>
             </Box>
           </Box>
@@ -398,10 +361,7 @@ const LandingPage = () => {
                 onMouseEnter={(e) => (e.currentTarget.style.cursor = "pointer")}
                 onClick={handleNavigateTo3dViewer}
               />
-              <Link
-                to="/dashboard/chargevue"
-                style={{ textDecoration: "none" }}
-              >
+              <Link to="/" style={{ textDecoration: "none" }}>
                 <Typography
                   variant="h6"
                   sx={{
@@ -414,7 +374,7 @@ const LandingPage = () => {
                     textAlign: "center",
                   }}
                 >
-                  ChargeVue
+                  Charts
                 </Typography>
               </Link>
               <Typography
@@ -427,7 +387,7 @@ const LandingPage = () => {
                   textAlign: "center",
                 }}
               >
-                Explore Battery Storage in 3D Detail
+                Visualize Key Metrics with Interactive Graphs and Analytics
               </Typography>
             </Box>
           </Box>

@@ -30,10 +30,10 @@ function App() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div className="app">
+        <div className="app" style={{ display: "flex", height: "100vh" }}>
           {currentUser && <Sidebar isSidebar={isSidebar} />}
           {/* <Sidebar isSidebar={isSidebar} /> */}
-          <main className="content">
+          <main className="content" style={{ flexGrow: 1, overflow: "auto" }}>
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
               <Route element={<PrivateRoute />}>
