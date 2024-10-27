@@ -47,9 +47,11 @@ const Login = () => {
     } else if (isAuthenticated) {
       setSnackbarMessage("Login Successful");
       setSnackbarOpen(true);
-      navigate("/dashboard");
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 1000); // Adding a small delay can help ensure the Snackbar shows before navigating
     }
-  }, [error, dispatch, isAuthenticated]);
+  }, [error, dispatch, isAuthenticated, navigate]);
 
   const handleSnackbarClose = () => {
     setSnackbarOpen(false);

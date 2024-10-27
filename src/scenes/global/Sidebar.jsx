@@ -16,6 +16,7 @@ import PieChartOutlineOutlinedIcon from "@mui/icons-material/PieChartOutlineOutl
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoney";
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -38,7 +39,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
 const Sidebar1 = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const [selected, setSelected] = useState("dashboard");
 
   return (
@@ -162,6 +163,13 @@ const Sidebar1 = () => {
             >
               Pages
             </Typography>
+            <Item
+              title="Expense Tracker"
+              to="/expensetracker"
+              icon={<AttachMoneyOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
             <Item
               title="Profile Form"
               to="/form"

@@ -20,6 +20,7 @@ import Login from "./scenes/signin";
 import LandingPage from "./scenes/landingpage";
 import SignUp from "./scenes/signup";
 import { useSelector } from "react-redux";
+import ExpenseTracker from "./scenes/expenseTracker";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
+                <Route path="expensetracker" element={<ExpenseTracker />} />
                 <Route path="/form" element={<Form />} />
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
