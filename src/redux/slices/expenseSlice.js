@@ -16,7 +16,13 @@ export const fetchExpenses = createAsyncThunk(
     return response.data;
   }
 );
-
+export const deleteExpense = createAsyncThunk(
+  "expenses/deleteExpense",
+  async (expenseId) => {
+    await axios.delete(`http://127.0.0.1:8080/api/v1/expenses/${expenseId}`);
+    return expenseId;
+  }
+);
 // Add a new expense
 export const addExpense = createAsyncThunk(
   "expenses/addExpense",
@@ -52,6 +58,11 @@ const expenseSlice = createSlice({
       })
       .addCase(addExpense.fulfilled, (state, action) => {
         state.expenses.push(action.payload);
+      })
+      .addCase(deleteExpense.fulfilled, (state, action) => {
+        state.expenses = state.expenses.filter(
+          (expense) => expense.id !== action.payload
+        );
       });
   },
 });

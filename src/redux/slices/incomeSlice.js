@@ -9,7 +9,13 @@ export const fetchIncomes = createAsyncThunk(
     return response.data;
   }
 );
-
+export const deleteIncome = createAsyncThunk(
+  "incomes/deleteIncome",
+  async (incomeId) => {
+    await axios.delete(`http://127.0.0.1:8080/api/v1/incomes/${incomeId}`);
+    return incomeId; // Return ID to remove it from the state
+  }
+);
 // Async thunk to add a new income
 export const addIncome = createAsyncThunk(
   "incomes/addIncome",
@@ -38,6 +44,11 @@ const incomeSlice = createSlice({
       })
       .addCase(addIncome.fulfilled, (state, action) => {
         state.incomes.push(action.payload);
+      })
+      .addCase(deleteIncome.fulfilled, (state, action) => {
+        state.incomes = state.incomes.filter(
+          (income) => income.id !== action.payload
+        );
       });
   },
 });
