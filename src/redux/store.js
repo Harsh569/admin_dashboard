@@ -1,12 +1,14 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import userSlice from "./slices/userSlice";
 import expenseSlice from "./slices/expenseSlice";
+import incomeSlice from "./slices/incomeSlice"; // Import income slice
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 const rootReducer = combineReducers({
   user: userSlice,
-  expenses: expenseSlice,
+  expenses: expenseSlice, // Ensure your expenses slice is added
+  incomes: incomeSlice, // Add incomes slice here
 });
 
 const persistConfig = {

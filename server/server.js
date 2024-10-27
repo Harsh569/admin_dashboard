@@ -18,6 +18,7 @@ app.use(cors());
 //user routes
 app.use("/api/v1/users", require("./routes/userRoute"));
 app.use("/api/v1/expenses", require("./routes/expenseRoutes"));
+app.use("/api/v1/incomes", require("./routes/incomeRoutes"));
 
 //port
 const PORT = 8080;
